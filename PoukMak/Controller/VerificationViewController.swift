@@ -37,9 +37,7 @@ class VerificationViewController: UIViewController, KAPinFieldDelegate {
         
      //Remove Boder Navigation
         self.navigationController?.navigationBar.layoutIfNeeded()
-        
-     
+ 
     }
-
 
 }

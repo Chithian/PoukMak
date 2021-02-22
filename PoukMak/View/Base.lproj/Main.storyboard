@@ -257,6 +257,7 @@ to your number, +85512666666</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gIa-uC-GxO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
