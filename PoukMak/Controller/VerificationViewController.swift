@@ -18,7 +18,7 @@ class VerificationViewController: UIViewController {
 
         //Navigation Titl
         self.title = "+855 12 666 666"
-        
+
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
@@ -28,6 +28,4 @@ class VerificationViewController: UIViewController {
  
     }
     
-   
-
 }

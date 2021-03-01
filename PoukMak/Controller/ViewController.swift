@@ -33,11 +33,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
         
  
-    // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
-    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
           
-    // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
-    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    
     }
     
     deinit {
@@ -69,16 +70,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         
         continueButton.layer.cornerRadius = 0
+        
         continueButton.backgroundColor = UIColor.orange
         
         
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-           // if keyboard size is not available for some reason, dont do anything
-           return
-        }
-      
-      // move the root view up by the distance of keyboard height
-      self.view.frame.origin.y = 0 - keyboardSize.height
+        
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+               if self.view.frame.origin.y == 0 {
+                   self.view.frame.origin.y -= keyboardSize.height
+                
+               }
+           }
         
     }
 
@@ -87,8 +89,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         continueButton.layer.cornerRadius = 20
         continueButton.backgroundColor = UIColor.lightGray
-      self.view.frame.origin.y = 0
-    }
+        if self.view.frame.origin.y != 0 {
+                self.view.frame.origin.y = 0
+            
+            }    }
     
     
     //Perform Segue to Verification Screen
