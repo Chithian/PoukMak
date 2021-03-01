@@ -105,21 +105,21 @@ your confirmation code.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
                                                 <rect key="frame" x="5" y="0.0" width="111" height="48"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagKh" translatesAutoresizingMaskIntoConstraints="NO" id="RRT-9e-ezz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="48"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="right" verticalHuggingPriority="251" text="+855" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-rD-ThS">
-                                                        <rect key="frame" x="64" y="0.0" width="47" height="48"/>
+                                                        <rect key="frame" x="55" y="0.0" width="56" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="5bM-Y4-G1O"/>
                                                     <constraint firstAttribute="width" constant="111" id="Jt6-h0-j5b"/>
@@ -332,6 +332,9 @@ to your number, +855 12 666666</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

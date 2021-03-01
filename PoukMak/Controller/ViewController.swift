@@ -26,25 +26,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
         countryCode.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 20
         
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
+    
+    @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+            
+            continueButton.layer.cornerRadius = 0
+            continueButton.backgroundColor = UIColor.orange
+            
+            let constraints = self.view.constraints
+            for constraint in constraints {
+                if constraint.identifier == "ContinueButtonBottomConstraint" {
+                    constraint.constant = keyboardSize.height
+                } else if constraint.identifier == "ContinueButtonLeadingConstraint" || constraint.identifier == "ContinueButtonTrailingConstraint" {
+                    constraint.constant = 0
+                } else if constraint.identifier == "LogoStackViewTopConstraint" {
+                    constraint.constant = -50
+                }
             }
         }
     }
+    
+    @objc func keyboardWillHide(notification: Notification) {
 
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        continueButton.layer.cornerRadius = 20
+        continueButton.backgroundColor = UIColor.gray
+        
+        let constraints = self.view.constraints
+        for constrain in constraints {
+            if constrain.identifier == "ContinueButtonBottomConstraint" {
+                constrain.constant = 60
+            } else if constrain.identifier == "ContinueButtonLeadingConstraint" || constrain.identifier == "ContinueButtonTrailingConstraint" {
+                constrain.constant = 30
+            } else if constrain.identifier == "LogoStackViewTopConstraint" {
+                constrain.constant = 40
+            }
         }
     }
-  
+    
     
     //Limit String input Phone Number MAX 12
     func textField(_ phoneNum: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -61,16 +85,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return updatedText.count <= 12
     }
     
-    
- 
-    
+
     //Perform Segue to Verification Screen
     @IBAction func continueBottonPressed(_ sender: UIButton) {
         
         //continueButton.backgroundColor = UIColor.yellow
         performSegue(withIdentifier: "GoToVerification", sender: self)
     }
-    
     
     // Navigation
     override func viewWillAppear(_ animated: Bool) {
