@@ -6,28 +6,16 @@
 //
 
 import UIKit
-import KAPinField
+import SVPinView
 
 
-class VerificationViewController: UIViewController, KAPinFieldDelegate {
+class VerificationViewController: UIViewController {
     
-    func pinField(_ field: KAPinField, didFinishWith code: String) {
-        print("didFinishWith : \(code)")
-    }
-
-    
-    @IBOutlet weak var pinField: KAPinField!
+    @IBOutlet weak var pinView: SVPinView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        pinField.properties.delegate = self
-        pinField.properties.token = "-" // Default to "•"
-        pinField.properties.numberOfCharacters = 6 // Default to 4
-        pinField.properties.animateFocus = true // Animate the currently focused token
-
-        
         //Navigation Titl
         self.title = "+855 12 666 666"
         
@@ -39,5 +27,7 @@ class VerificationViewController: UIViewController, KAPinFieldDelegate {
         self.navigationController?.navigationBar.layoutIfNeeded()
  
     }
+    
+   
 
 }

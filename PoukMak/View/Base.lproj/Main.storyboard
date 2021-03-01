@@ -22,22 +22,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="T8M-ON-zxj">
-                                        <rect key="frame" x="10" y="74.000000000000014" width="394" height="195.33333333333337"/>
+                                        <rect key="frame" x="10" y="73.999999999999986" width="394" height="182.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="App" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-JM-FIr">
-                                                <rect key="frame" x="160.66666666666666" y="0.0" width="73" height="86.666666666666671"/>
+                                                <rect key="frame" x="160.66666666666666" y="0.0" width="73" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="XTj-gL-4WV"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Pouk Mak!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlW-Oh-hr2">
-                                                <rect key="frame" x="55.666666666666657" y="102.66666666666666" width="282.66666666666674" height="33.666666666666657"/>
+                                                <rect key="frame" x="55.666666666666657" y="90" width="282.66666666666674" height="33.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-lW-rhB">
-                                                <rect key="frame" x="44.333333333333343" y="152.33333333333334" width="305.33333333333326" height="43"/>
+                                                <rect key="frame" x="44.333333333333343" y="139.66666666666666" width="305.33333333333326" height="43"/>
                                                 <string key="text">Provide your phone number to receive
 your confirmation code.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -95,32 +95,33 @@ your confirmation code.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-eY-h8l">
-                                        <rect key="frame" x="15" y="289.33333333333331" width="384" height="49"/>
+                                        <rect key="frame" x="15" y="286.66666666666669" width="384" height="49"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-hj-ya7">
-                                                <rect key="frame" x="101" y="0.0" width="282" height="48"/>
+                                                <rect key="frame" x="113" y="0.0" width="270" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="4Pc-Px-iTB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
-                                                <rect key="frame" x="1" y="0.0" width="99" height="48"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
+                                                <rect key="frame" x="1" y="0.0" width="111" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+855" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-rD-ThS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41" height="48"/>
+                                                        <rect key="frame" x="0.0" y="13.999999999999998" width="47" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagKh" translatesAutoresizingMaskIntoConstraints="NO" id="RRT-9e-ezz">
-                                                        <rect key="frame" x="58" y="0.0" width="41" height="48"/>
+                                                        <rect key="frame" x="64" y="14.666666666666629" width="47" height="19"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="5bM-Y4-G1O"/>
+                                                    <constraint firstAttribute="width" constant="111" id="Jt6-h0-j5b"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -139,7 +140,7 @@ your confirmation code.</string>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="T8M-ON-zxj" secondAttribute="trailing" constant="10" id="86w-3G-ydY"/>
                                     <constraint firstItem="xNd-eY-h8l" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="15" id="8Di-xS-0eu"/>
                                     <constraint firstItem="Kim-md-SD2" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="10" id="8hd-Bj-KTK"/>
-                                    <constraint firstItem="xNd-eY-h8l" firstAttribute="top" secondItem="T8M-ON-zxj" secondAttribute="bottom" constant="20" id="90D-Ly-Iyq"/>
+                                    <constraint firstItem="xNd-eY-h8l" firstAttribute="top" secondItem="T8M-ON-zxj" secondAttribute="bottom" constant="30" id="90D-Ly-Iyq"/>
                                     <constraint firstItem="T8M-ON-zxj" firstAttribute="top" secondItem="6ml-Vt-HeR" secondAttribute="top" constant="30" id="Oex-4a-HCs"/>
                                     <constraint firstItem="yau-WN-Msu" firstAttribute="top" secondItem="Kim-md-SD2" secondAttribute="bottom" constant="40" id="QZc-ym-m5w"/>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="Kim-md-SD2" secondAttribute="trailing" constant="10" id="RW8-y6-cFZ"/>
@@ -147,7 +148,6 @@ your confirmation code.</string>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="bottom" secondItem="yau-WN-Msu" secondAttribute="bottom" constant="20" id="a42-Bj-k8E"/>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="yau-WN-Msu" secondAttribute="trailing" constant="25" id="guC-aS-DwV"/>
                                     <constraint firstItem="T8M-ON-zxj" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="10" id="lu0-2f-Kcp"/>
-                                    <constraint firstItem="Kim-md-SD2" firstAttribute="top" secondItem="xNd-eY-h8l" secondAttribute="bottom" constant="249" id="pRf-qM-PVx"/>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="xNd-eY-h8l" secondAttribute="trailing" constant="15" id="x58-hw-5x2"/>
                                 </constraints>
                             </view>
@@ -175,9 +175,8 @@ your confirmation code.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-9Q-9P9">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-9Q-9P9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="apZ-vT-CHy">
                                 <rect key="frame" x="10" y="73.999999999999986" width="394" height="165.66666666666663"/>
@@ -202,7 +201,7 @@ to your number, +85512666666</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-wB-WCW">
-                                <rect key="frame" x="10" y="433" width="394" height="21"/>
+                                <rect key="frame" x="10" y="419.66666666666669" width="394" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Didn’t receive a code? ">
                                         <attributes>
@@ -220,32 +219,66 @@ to your number, +85512666666</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-TR-XHr" customClass="KAPinField" customModule="KAPinField">
-                                <rect key="frame" x="57" y="343" width="300" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xn4-zQ-Kgv" customClass="SVPinView" customModule="SVPinView">
+                                <rect key="frame" x="50" y="339.66666666666669" width="314" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="And-DU-9GJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iv4-vE-FqF"/>
+                                    <constraint firstAttribute="height" constant="60" id="Uqx-nb-OON"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderLineColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pinLength">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="interSpace">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="activeBorderLineThickness">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fieldCornerRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="activeFieldCornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldSecureText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="secureTextDelay">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderLineColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bh9-nz-PAI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OwS-TR-XHr" firstAttribute="centerY" secondItem="8XA-Me-Yk7" secondAttribute="centerY" id="CkP-mC-veg"/>
-                            <constraint firstItem="OwS-TR-XHr" firstAttribute="centerX" secondItem="8XA-Me-Yk7" secondAttribute="centerX" id="HzG-YS-gs5"/>
+                            <constraint firstItem="xn4-zQ-Kgv" firstAttribute="centerX" secondItem="PbN-9Q-9P9" secondAttribute="centerX" id="2Ny-ID-ynE"/>
+                            <constraint firstItem="PbN-9Q-9P9" firstAttribute="leading" secondItem="8XA-Me-Yk7" secondAttribute="leadingMargin" constant="-20" id="5OP-cE-keC"/>
+                            <constraint firstItem="apZ-vT-CHy" firstAttribute="top" secondItem="PbN-9Q-9P9" secondAttribute="bottom" constant="30" id="BHR-RL-8K8"/>
                             <constraint firstItem="Bh9-nz-PAI" firstAttribute="trailing" secondItem="DQA-wB-WCW" secondAttribute="trailing" constant="10" id="Iwx-5P-CdP"/>
-                            <constraint firstItem="DQA-wB-WCW" firstAttribute="top" secondItem="OwS-TR-XHr" secondAttribute="bottom" constant="40" id="Px2-V4-id0"/>
+                            <constraint firstItem="Bh9-nz-PAI" firstAttribute="trailing" secondItem="xn4-zQ-Kgv" secondAttribute="trailing" constant="50" id="JWV-AQ-0oT"/>
+                            <constraint firstItem="DQA-wB-WCW" firstAttribute="leading" secondItem="Bh9-nz-PAI" secondAttribute="leading" constant="10" id="RrC-Eg-cZ0"/>
                             <constraint firstItem="apZ-vT-CHy" firstAttribute="leading" secondItem="Bh9-nz-PAI" secondAttribute="leading" constant="10" id="XP0-xH-fFU"/>
+                            <constraint firstItem="xn4-zQ-Kgv" firstAttribute="top" secondItem="8XA-Me-Yk7" secondAttribute="top" constant="339.66666666666674" id="aj2-7I-x2e"/>
                             <constraint firstItem="Bh9-nz-PAI" firstAttribute="trailing" secondItem="apZ-vT-CHy" secondAttribute="trailing" constant="10" id="gdK-CK-8K0"/>
-                            <constraint firstItem="DQA-wB-WCW" firstAttribute="leading" secondItem="Bh9-nz-PAI" secondAttribute="leading" constant="10" id="lv2-J2-h3B"/>
+                            <constraint firstItem="xn4-zQ-Kgv" firstAttribute="leading" secondItem="Bh9-nz-PAI" secondAttribute="leading" constant="50" id="iPJ-zf-Xft"/>
                             <constraint firstItem="apZ-vT-CHy" firstAttribute="top" secondItem="Bh9-nz-PAI" secondAttribute="top" constant="30" id="nJ0-M0-xxk"/>
+                            <constraint firstItem="DQA-wB-WCW" firstAttribute="top" secondItem="xn4-zQ-Kgv" secondAttribute="bottom" constant="20" id="tBE-Jo-o4u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="taH-Ha-IDe"/>
                     <connections>
-                        <outlet property="pinField" destination="OwS-TR-XHr" id="eMO-tj-4pg"/>
+                        <outlet property="pinView" destination="xn4-zQ-Kgv" id="P8X-3x-67Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sx-O1-1ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
