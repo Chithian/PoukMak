@@ -206,7 +206,7 @@ to your number, +855 12 666666</string>
                                 <rect key="frame" x="20" y="299.5" width="335" height="60"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xn4-zQ-Kgv" customClass="SVPinView" customModule="SVPinView">
-                                        <rect key="frame" x="30" y="0.0" width="275" height="40"/>
+                                        <rect key="frame" x="30" y="0.0" width="275" height="60"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -246,7 +246,7 @@ to your number, +855 12 666666</string>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="xn4-zQ-Kgv" secondAttribute="bottom" constant="20" id="5Cd-Sx-XeL"/>
+                                    <constraint firstAttribute="bottom" secondItem="xn4-zQ-Kgv" secondAttribute="bottom" id="5Cd-Sx-XeL"/>
                                     <constraint firstAttribute="height" constant="60" id="8od-Fr-xN2"/>
                                     <constraint firstItem="xn4-zQ-Kgv" firstAttribute="top" secondItem="lEW-Rd-lQX" secondAttribute="top" id="Hag-hG-BL9"/>
                                     <constraint firstAttribute="trailing" secondItem="xn4-zQ-Kgv" secondAttribute="trailing" constant="30" id="JZN-6A-biH"/>
