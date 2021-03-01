@@ -20,25 +20,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
         
         phoneNum.delegate = self
         countryCode.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 20
         
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
-        
         view.addGestureRecognizer(tap)
-        
  
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
           
         // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    
     }
     
     deinit {
@@ -70,35 +66,48 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         
         continueButton.layer.cornerRadius = 0
-        
         continueButton.backgroundColor = UIColor.orange
         
-        
-        
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-               if self.view.frame.origin.y == 0 {
-                   self.view.frame.origin.y -= keyboardSize.height
-                
-               }
-           }
+         
+            let constraints = self.view.constraints
+            for constraint in constraints {
+                if constraint.identifier == "ContinueButtonBottomConstraint" {
+                    constraint.constant = keyboardSize.height
+                } else if constraint.identifier == "ContinueButtonLeadingConstraint" || constraint.identifier == "ContinueButtonTrailingConstraint" {
+                    constraint.constant = 0
+                } else if constraint.identifier == "LogoStackViewTopConstraint" {
+                    constraint.constant = -50
+                }
+            }
+        }
         
     }
+        
+      
 
     @objc func keyboardWillHide(notification: NSNotification) {
       // move back the root view origin to zero
         
         continueButton.layer.cornerRadius = 20
         continueButton.backgroundColor = UIColor.lightGray
-        if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y = 0
-            
-            }    }
+        
+        let constraints = self.view.constraints
+        for constrain in constraints {
+            if constrain.identifier == "ContinueButtonBottomConstraint" {
+                constrain.constant = 60
+            } else if constrain.identifier == "ContinueButtonLeadingConstraint" || constrain.identifier == "ContinueButtonTrailingConstraint" {
+                constrain.constant = 20
+            } else if constrain.identifier == "LogoStackViewTopConstraint" {
+                constrain.constant = 40
+            }
+        }
     
-    
+    }
     //Perform Segue to Verification Screen
     @IBAction func continueBottonPressed(_ sender: UIButton) {
         
-//        continueButton.backgroundColor = UIColor.yellow
+        //continueButton.backgroundColor = UIColor.yellow
         performSegue(withIdentifier: "GoToVerification", sender: self)
     }
     
@@ -114,12 +123,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: animated)
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
-    
-    
-
 
 }
-

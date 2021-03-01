@@ -9,6 +9,5 @@ target 'PoukMak' do
 
 #	pod 'KAPinField'
   pod 'SVPinView', '~> 1.0'
-#  pod "KWVerificationCodeView"
-
+  
 end

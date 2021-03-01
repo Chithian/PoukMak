@@ -13,19 +13,24 @@ class VerificationViewController: UIViewController {
     
     @IBOutlet weak var pinView: SVPinView!
     
+    @IBOutlet weak var pinViewView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Navigation Titl
+        
+        //Navigation Title
         self.title = "+855 12 666 666"
-
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         
-     //Remove Boder Navigation
+        //Remove Boder Navigation
         self.navigationController?.navigationBar.layoutIfNeeded()
  
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        pinViewView.layer.cornerRadius = 10
     }
     
 }
