@@ -26,20 +26,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         countryCode.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 20
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
- 
-        // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-          
-        // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
     
-    deinit {
-          NotificationCenter.default.removeObserver(self)
-      }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+  
     
     //Limit String input Phone Number MAX 12
     func textField(_ phoneNum: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -57,53 +62,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //Calls this function when the tap is recognized.
-    @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
+ 
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        
-        continueButton.layer.cornerRadius = 0
-        continueButton.backgroundColor = UIColor.orange
-        
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-         
-            let constraints = self.view.constraints
-            for constraint in constraints {
-                if constraint.identifier == "ContinueButtonBottomConstraint" {
-                    constraint.constant = keyboardSize.height
-                } else if constraint.identifier == "ContinueButtonLeadingConstraint" || constraint.identifier == "ContinueButtonTrailingConstraint" {
-                    constraint.constant = 0
-                } else if constraint.identifier == "LogoStackViewTopConstraint" {
-                    constraint.constant = -50
-                }
-            }
-        }
-        
-    }
-        
-      
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-      // move back the root view origin to zero
-        
-        continueButton.layer.cornerRadius = 20
-        continueButton.backgroundColor = UIColor.lightGray
-        
-        let constraints = self.view.constraints
-        for constrain in constraints {
-            if constrain.identifier == "ContinueButtonBottomConstraint" {
-                constrain.constant = 60
-            } else if constrain.identifier == "ContinueButtonLeadingConstraint" || constrain.identifier == "ContinueButtonTrailingConstraint" {
-                constrain.constant = 20
-            } else if constrain.identifier == "LogoStackViewTopConstraint" {
-                constrain.constant = 40
-            }
-        }
-    
-    }
     //Perform Segue to Verification Screen
     @IBAction func continueBottonPressed(_ sender: UIButton) {
         

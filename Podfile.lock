@@ -1,16 +1,20 @@
 PODS:
-  - KAPinField (5.0.1)
+  - IQKeyboardManagerSwift (6.3.0)
+  - SVPinView (1.0.11)
 
 DEPENDENCIES:
-  - KAPinField
+  - IQKeyboardManagerSwift (= 6.3.0)
+  - SVPinView (~> 1.0)
 
 SPEC REPOS:
   trunk:
-    - KAPinField
+    - IQKeyboardManagerSwift
+    - SVPinView
 
 SPEC CHECKSUMS:
-  KAPinField: 24d85205115c1bb6aef8ff809944f41ac8c2785f
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
 
-PODFILE CHECKSUM: 2130ff68eb015353c8f7d22c1d46f565de414856
+PODFILE CHECKSUM: a5f9c8a6869f67b50537d043bfd0196ea7d4c3b1
 
 COCOAPODS: 1.10.1

@@ -7,7 +7,7 @@ target 'PoukMak' do
 
   # Pods for PoukMak
 
-#	pod 'KAPinField'
   pod 'SVPinView', '~> 1.0'
+  pod 'IQKeyboardManagerSwift', '6.3.0'
   
 end
