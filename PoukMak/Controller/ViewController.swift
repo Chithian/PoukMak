@@ -21,55 +21,72 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
         phoneNum.delegate = self
         countryCode.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 20
         
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+             // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            
+
             continueButton.layer.cornerRadius = 0
             continueButton.backgroundColor = UIColor.orange
-            
+
             let constraints = self.view.constraints
             for constraint in constraints {
-                if constraint.identifier == "ContinueButtonBottomConstraint" {
+                if constraint.identifier == "ContinueBottomConstraint" {
                     constraint.constant = keyboardSize.height
-                } else if constraint.identifier == "ContinueButtonLeadingConstraint" || constraint.identifier == "ContinueButtonTrailingConstraint" {
-                    constraint.constant = 0
-                } else if constraint.identifier == "LogoStackViewTopConstraint" {
-                    constraint.constant = -50
+                } else if constraint.identifier == "ContinueLeadingConstraint" || constraint.identifier == "ContinueTrailingConstraint" {
+                    constraint.constant = 10
+                } else if constraint.identifier == "LogoTopConstraint" {
+                    constraint.constant = -100
                 }
             }
         }
     }
-    
+
     @objc func keyboardWillHide(notification: Notification) {
 
         continueButton.layer.cornerRadius = 20
         continueButton.backgroundColor = UIColor.gray
-        
+
         let constraints = self.view.constraints
         for constrain in constraints {
-            if constrain.identifier == "ContinueButtonBottomConstraint" {
-                constrain.constant = 60
-            } else if constrain.identifier == "ContinueButtonLeadingConstraint" || constrain.identifier == "ContinueButtonTrailingConstraint" {
-                constrain.constant = 30
-            } else if constrain.identifier == "LogoStackViewTopConstraint" {
-                constrain.constant = 40
+            if constrain.identifier == "ContinueBottomConstraint" {
+                constrain.constant = 0
+            } else if constrain.identifier == "ContinueLeadingConstraint" || constrain.identifier == "ContinueTrailingConstraint" {
+                constrain.constant = 0
+            } else if constrain.identifier == "LogoTopConstraint" {
+                constrain.constant = 0
             }
         }
     }
     
-    
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//
+//        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+//           // if keyboard size is not available for some reason, dont do anything
+//           return
+//        }
+//
+//      // move the root view up by the distance of keyboard height
+//      self.view.frame.origin.y = 0 - keyboardSize.height
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//      // move back the root view origin to zero
+//      self.view.frame.origin.y = 0
+//    }
+//
+
     //Limit String input Phone Number MAX 12
     func textField(_ phoneNum: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // get the current text, or use an empty string if that failed
@@ -84,7 +101,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // make sure the result is under 12 characters
         return updatedText.count <= 12
     }
-    
+//
 
     //Perform Segue to Verification Screen
     @IBAction func continueBottonPressed(_ sender: UIButton) {

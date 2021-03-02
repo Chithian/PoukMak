@@ -46,7 +46,7 @@ your confirmation code.</string>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kim-md-SD2" customClass="PPTC" customModule="PoukMak" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kim-md-SD2">
                                         <rect key="frame" x="33.5" y="508" width="308.5" height="41"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -82,7 +82,7 @@ your confirmation code.</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yau-WN-Msu">
                                         <rect key="frame" x="25" y="589" width="325" height="48"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="cGf-LW-9W7"/>
                                         </constraints>
@@ -95,25 +95,25 @@ your confirmation code.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-eY-h8l">
-                                        <rect key="frame" x="15" y="306.5" width="345" height="49"/>
+                                        <rect key="frame" x="20" y="306.5" width="335" height="49"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-hj-ya7">
-                                                <rect key="frame" x="116" y="0.0" width="228" height="48"/>
+                                                <rect key="frame" x="100" y="0.0" width="234" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="4Pc-Px-iTB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
-                                                <rect key="frame" x="5" y="0.0" width="111" height="48"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
+                                                <rect key="frame" x="5" y="0.0" width="100" height="48"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagKh" translatesAutoresizingMaskIntoConstraints="NO" id="RRT-9e-ezz">
                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="right" verticalHuggingPriority="251" text="+855" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-rD-ThS">
-                                                        <rect key="frame" x="55" y="0.0" width="56" height="48"/>
+                                                        <rect key="frame" x="46" y="0.0" width="54" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -122,7 +122,7 @@ your confirmation code.</string>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="5bM-Y4-G1O"/>
-                                                    <constraint firstAttribute="width" constant="111" id="Jt6-h0-j5b"/>
+                                                    <constraint firstAttribute="width" constant="100" id="Jt6-h0-j5b"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -130,7 +130,7 @@ your confirmation code.</string>
                                             <constraint firstItem="IWT-k2-FZ0" firstAttribute="leading" secondItem="xNd-eY-h8l" secondAttribute="leading" constant="5" id="T3a-kV-9bw"/>
                                             <constraint firstAttribute="bottom" secondItem="IWT-k2-FZ0" secondAttribute="bottom" constant="1" id="YkL-1e-Zp4"/>
                                             <constraint firstItem="dBo-hj-ya7" firstAttribute="top" secondItem="xNd-eY-h8l" secondAttribute="top" id="lOv-hn-AMj"/>
-                                            <constraint firstItem="dBo-hj-ya7" firstAttribute="leading" secondItem="IWT-k2-FZ0" secondAttribute="trailing" id="qsG-bS-fKu"/>
+                                            <constraint firstItem="dBo-hj-ya7" firstAttribute="leading" secondItem="IWT-k2-FZ0" secondAttribute="trailing" constant="-5" id="qsG-bS-fKu"/>
                                             <constraint firstAttribute="trailing" secondItem="dBo-hj-ya7" secondAttribute="trailing" constant="1" id="yem-81-5Mf"/>
                                             <constraint firstItem="IWT-k2-FZ0" firstAttribute="top" secondItem="xNd-eY-h8l" secondAttribute="top" id="zq4-Lm-tgU"/>
                                         </constraints>
@@ -140,17 +140,17 @@ your confirmation code.</string>
                                 <constraints>
                                     <constraint firstItem="yau-WN-Msu" firstAttribute="top" secondItem="Kim-md-SD2" secondAttribute="bottom" constant="40" id="0nd-m3-17u"/>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="T8M-ON-zxj" secondAttribute="trailing" constant="10" id="86w-3G-ydY"/>
-                                    <constraint firstItem="xNd-eY-h8l" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="15" id="8Di-xS-0eu"/>
+                                    <constraint firstItem="xNd-eY-h8l" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="20" id="8Di-xS-0eu"/>
                                     <constraint firstItem="xNd-eY-h8l" firstAttribute="top" secondItem="T8M-ON-zxj" secondAttribute="bottom" constant="40" id="90D-Ly-Iyq"/>
-                                    <constraint firstItem="T8M-ON-zxj" firstAttribute="top" secondItem="6ml-Vt-HeR" secondAttribute="top" constant="40" identifier="LogoStackViewTopConstraint" id="Oex-4a-HCs"/>
+                                    <constraint firstItem="T8M-ON-zxj" firstAttribute="top" secondItem="6ml-Vt-HeR" secondAttribute="top" constant="40" identifier="LogoTopConstraint" id="Oex-4a-HCs"/>
                                     <constraint firstItem="Kim-md-SD2" firstAttribute="centerX" secondItem="yF3-NV-QBA" secondAttribute="centerX" id="SZV-as-OO9"/>
                                     <constraint firstItem="xNd-eY-h8l" firstAttribute="centerX" secondItem="yF3-NV-QBA" secondAttribute="centerX" id="c8u-qF-en0"/>
-                                    <constraint firstItem="yau-WN-Msu" firstAttribute="leading" secondItem="yF3-NV-QBA" secondAttribute="leading" constant="25" identifier="ContinueButtonLeadingConstraint" id="gOB-ZV-GXh"/>
+                                    <constraint firstItem="yau-WN-Msu" firstAttribute="leading" secondItem="yF3-NV-QBA" secondAttribute="leading" constant="25" identifier="ContinueLeadingConstraint" id="gOB-ZV-GXh"/>
                                     <constraint firstItem="T8M-ON-zxj" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="10" id="lu0-2f-Kcp"/>
                                     <constraint firstItem="T8M-ON-zxj" firstAttribute="centerX" secondItem="yF3-NV-QBA" secondAttribute="centerX" id="mr4-ep-NXF"/>
-                                    <constraint firstAttribute="bottom" secondItem="yau-WN-Msu" secondAttribute="bottom" constant="30" identifier="ContinueButtonbottomConstraint" id="tFk-An-pGJ"/>
-                                    <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="xNd-eY-h8l" secondAttribute="trailing" constant="15" id="x58-hw-5x2"/>
-                                    <constraint firstAttribute="trailing" secondItem="yau-WN-Msu" secondAttribute="trailing" constant="25" identifier="ContinueButtonTrailingConstraint" id="zkh-hX-b0j"/>
+                                    <constraint firstAttribute="bottom" secondItem="yau-WN-Msu" secondAttribute="bottom" constant="30" identifier="ContinueBottomConstraint" id="tFk-An-pGJ"/>
+                                    <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="xNd-eY-h8l" secondAttribute="trailing" constant="20" id="x58-hw-5x2"/>
+                                    <constraint firstAttribute="trailing" secondItem="yau-WN-Msu" secondAttribute="trailing" constant="25" identifier="ContinueTrailingConstraint" id="zkh-hX-b0j"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -206,7 +206,7 @@ to your number, +855 12 666666</string>
                                 <rect key="frame" x="20" y="299.5" width="335" height="60"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xn4-zQ-Kgv" customClass="SVPinView" customModule="SVPinView">
-                                        <rect key="frame" x="30" y="0.0" width="275" height="60"/>
+                                        <rect key="frame" x="40" y="0.0" width="255" height="60"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -249,8 +249,8 @@ to your number, +855 12 666666</string>
                                     <constraint firstAttribute="bottom" secondItem="xn4-zQ-Kgv" secondAttribute="bottom" id="5Cd-Sx-XeL"/>
                                     <constraint firstAttribute="height" constant="60" id="8od-Fr-xN2"/>
                                     <constraint firstItem="xn4-zQ-Kgv" firstAttribute="top" secondItem="lEW-Rd-lQX" secondAttribute="top" id="Hag-hG-BL9"/>
-                                    <constraint firstAttribute="trailing" secondItem="xn4-zQ-Kgv" secondAttribute="trailing" constant="30" id="JZN-6A-biH"/>
-                                    <constraint firstItem="xn4-zQ-Kgv" firstAttribute="leading" secondItem="lEW-Rd-lQX" secondAttribute="leading" constant="30" id="knX-SG-8SZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="xn4-zQ-Kgv" secondAttribute="trailing" constant="40" id="JZN-6A-biH"/>
+                                    <constraint firstItem="xn4-zQ-Kgv" firstAttribute="leading" secondItem="lEW-Rd-lQX" secondAttribute="leading" constant="40" id="knX-SG-8SZ"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-wB-WCW">
@@ -324,14 +324,14 @@ to your number, +855 12 666666</string>
         <image name="App" width="73" height="74"/>
         <image name="confirm" width="73" height="73"/>
         <image name="flagKh" width="30" height="19"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
