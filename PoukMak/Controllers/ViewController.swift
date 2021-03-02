@@ -10,11 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    
+    @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var countryCode: UIStackView!
-    
     @IBOutlet weak var continueButton: UIButton!
-    
     @IBOutlet weak var phoneNum: UITextField!
     
     
@@ -25,9 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         countryCode.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 20
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+        // call the 'keyboardWillShow' function when the view controlelr receive notification that keyboard is going to be shown
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
              // call the 'keyboardWillHide' function when the view controlelr receive notification that keyboard is going to be hidden
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -36,18 +32,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-
             continueButton.layer.cornerRadius = 0
             continueButton.backgroundColor = UIColor.orange
 
-            let constraints = self.view.constraints
+            let constraints = viewContainer.constraints
+            
             for constraint in constraints {
                 if constraint.identifier == "ContinueBottomConstraint" {
                     constraint.constant = keyboardSize.height
                 } else if constraint.identifier == "ContinueLeadingConstraint" || constraint.identifier == "ContinueTrailingConstraint" {
-                    constraint.constant = 10
+                    constraint.constant = 0
                 } else if constraint.identifier == "LogoTopConstraint" {
-                    constraint.constant = -100
+                    constraint.constant = -10
                 }
             }
         }
@@ -58,34 +54,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         continueButton.layer.cornerRadius = 20
         continueButton.backgroundColor = UIColor.gray
 
-        let constraints = self.view.constraints
+        let constraints = viewContainer.constraints
         for constrain in constraints {
             if constrain.identifier == "ContinueBottomConstraint" {
-                constrain.constant = 0
+                constrain.constant = 60
             } else if constrain.identifier == "ContinueLeadingConstraint" || constrain.identifier == "ContinueTrailingConstraint" {
-                constrain.constant = 0
+                constrain.constant = 20
             } else if constrain.identifier == "LogoTopConstraint" {
-                constrain.constant = 0
+                constrain.constant = 40
             }
         }
     }
-    
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//
-//        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-//           // if keyboard size is not available for some reason, dont do anything
-//           return
-//        }
-//
-//      // move the root view up by the distance of keyboard height
-//      self.view.frame.origin.y = 0 - keyboardSize.height
-//    }
-//
-//    @objc func keyboardWillHide(notification: NSNotification) {
-//      // move back the root view origin to zero
-//      self.view.frame.origin.y = 0
-//    }
-//
 
     //Limit String input Phone Number MAX 12
     func textField(_ phoneNum: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

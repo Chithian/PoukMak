@@ -52,6 +52,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4361C15925EE131C00FA613B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43685F4B25E29840005F2462 /* Assets.xcassets */,
+				43685F4D25E29840005F2462 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		43685F3625E2983E005F2462 = {
 			isa = PBXGroup;
 			children = (
@@ -75,30 +84,29 @@
 			children = (
 				43685F4225E2983E005F2462 /* AppDelegate.swift */,
 				43685F4425E2983E005F2462 /* SceneDelegate.swift */,
-				43685F5925E29F79005F2462 /* View */,
-				43685F5725E29F6F005F2462 /* Controller */,
-				43685F4B25E29840005F2462 /* Assets.xcassets */,
-				43685F4D25E29840005F2462 /* LaunchScreen.storyboard */,
+				43685F5925E29F79005F2462 /* Views */,
+				43685F5725E29F6F005F2462 /* Controllers */,
+				4361C15925EE131C00FA613B /* Supporting Files */,
 				43685F5025E29840005F2462 /* Info.plist */,
 			);
 			path = PoukMak;
 			sourceTree = "<group>";
 		};
-		43685F5725E29F6F005F2462 /* Controller */ = {
+		43685F5725E29F6F005F2462 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				43685F4625E2983E005F2462 /* ViewController.swift */,
 				43685F6B25E2AEC5005F2462 /* VerificationViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		43685F5925E29F79005F2462 /* View */ = {
+		43685F5925E29F79005F2462 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				43685F4825E2983E005F2462 /* Main.storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8CEC330AC61D8BF04D3E8ECB /* Pods */ = {
