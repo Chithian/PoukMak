@@ -18,6 +18,8 @@ class VerificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Change KeyboardType
+        pinView.keyboardType = .numberPad
         
         //Navigation Title
         self.title = "+855 12 666 666"

@@ -219,7 +219,7 @@ to your number, +855 12 666666</string>
                                                 <integer key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="interSpace">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineThickness">
                                                 <real key="value" value="2"/>
