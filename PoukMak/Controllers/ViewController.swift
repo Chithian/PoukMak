@@ -90,7 +90,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //Perform Segue to Verification Screen
     @IBAction func continueBottonPressed(_ sender: UIButton) {
         if phoneNum.text!.isEmpty  {
-            print("Error Missing")
+            print("Error")
         }else {
             
             performSegue(withIdentifier: "GoToVerification", sender: self)
