@@ -47,7 +47,7 @@ your confirmation code.</string>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kim-md-SD2">
-                                        <rect key="frame" x="33.5" y="518" width="308.5" height="41"/>
+                                        <rect key="frame" x="33.5" y="508" width="308.5" height="41"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">By continuing, you are agreeing to the
@@ -81,7 +81,7 @@ your confirmation code.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yau-WN-Msu">
-                                        <rect key="frame" x="25" y="599" width="325" height="48"/>
+                                        <rect key="frame" x="25" y="589" width="325" height="48"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="cGf-LW-9W7"/>
@@ -97,8 +97,8 @@ your confirmation code.</string>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-eY-h8l">
                                         <rect key="frame" x="30" y="306.5" width="315" height="49"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-hj-ya7">
-                                                <rect key="frame" x="100" y="0.0" width="214" height="48"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-hj-ya7">
+                                                <rect key="frame" x="110" y="0.0" width="204" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="4Pc-Px-iTB"/>
                                                 </constraints>
@@ -106,7 +106,7 @@ your confirmation code.</string>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-k2-FZ0">
-                                                <rect key="frame" x="5" y="0.0" width="100" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagKh" translatesAutoresizingMaskIntoConstraints="NO" id="RRT-9e-ezz">
                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
@@ -127,9 +127,9 @@ your confirmation code.</string>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="IWT-k2-FZ0" firstAttribute="leading" secondItem="xNd-eY-h8l" secondAttribute="leading" constant="5" id="T3a-kV-9bw"/>
+                                            <constraint firstItem="IWT-k2-FZ0" firstAttribute="leading" secondItem="xNd-eY-h8l" secondAttribute="leading" id="T3a-kV-9bw"/>
                                             <constraint firstAttribute="bottom" secondItem="IWT-k2-FZ0" secondAttribute="bottom" constant="1" id="YkL-1e-Zp4"/>
-                                            <constraint firstItem="dBo-hj-ya7" firstAttribute="leading" secondItem="IWT-k2-FZ0" secondAttribute="trailing" constant="-5" id="qsG-bS-fKu"/>
+                                            <constraint firstItem="dBo-hj-ya7" firstAttribute="leading" secondItem="IWT-k2-FZ0" secondAttribute="trailing" constant="10" id="qsG-bS-fKu"/>
                                             <constraint firstAttribute="trailing" secondItem="dBo-hj-ya7" secondAttribute="trailing" constant="1" id="yem-81-5Mf"/>
                                             <constraint firstItem="dBo-hj-ya7" firstAttribute="top" secondItem="IWT-k2-FZ0" secondAttribute="top" id="yib-GD-c6z"/>
                                             <constraint firstItem="IWT-k2-FZ0" firstAttribute="top" secondItem="xNd-eY-h8l" secondAttribute="top" id="zq4-Lm-tgU"/>
@@ -148,7 +148,7 @@ your confirmation code.</string>
                                     <constraint firstItem="yau-WN-Msu" firstAttribute="leading" secondItem="yF3-NV-QBA" secondAttribute="leading" constant="25" identifier="ContinueLeadingConstraint" id="gOB-ZV-GXh"/>
                                     <constraint firstItem="T8M-ON-zxj" firstAttribute="leading" secondItem="6ml-Vt-HeR" secondAttribute="leading" constant="10" id="lu0-2f-Kcp"/>
                                     <constraint firstItem="T8M-ON-zxj" firstAttribute="centerX" secondItem="yF3-NV-QBA" secondAttribute="centerX" id="mr4-ep-NXF"/>
-                                    <constraint firstAttribute="bottom" secondItem="yau-WN-Msu" secondAttribute="bottom" constant="20" identifier="ContinueBottomConstraint" id="tFk-An-pGJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="yau-WN-Msu" secondAttribute="bottom" constant="30" identifier="ContinueBottomConstraint" id="tFk-An-pGJ"/>
                                     <constraint firstItem="6ml-Vt-HeR" firstAttribute="trailing" secondItem="xNd-eY-h8l" secondAttribute="trailing" constant="30" id="x58-hw-5x2"/>
                                     <constraint firstAttribute="trailing" secondItem="yau-WN-Msu" secondAttribute="trailing" constant="25" identifier="ContinueTrailingConstraint" id="zkh-hX-b0j"/>
                                 </constraints>
@@ -162,6 +162,7 @@ your confirmation code.</string>
                         <outlet property="continueButton" destination="yau-WN-Msu" id="4cy-s3-pgO"/>
                         <outlet property="countryCode" destination="IWT-k2-FZ0" id="NSg-na-v5q"/>
                         <outlet property="phoneNum" destination="dBo-hj-ya7" id="8Xs-ZP-Tfy"/>
+                        <outlet property="phoneNumView" destination="xNd-eY-h8l" id="Aab-Dh-k9R"/>
                         <outlet property="viewContainer" destination="yF3-NV-QBA" id="q5J-7P-k9N"/>
                         <segue destination="SiR-yl-hIT" kind="show" identifier="GoToVerification" id="OPj-3H-7zr"/>
                     </connections>
@@ -196,7 +197,7 @@ your confirmation code.</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTb-wH-sKJ">
                                         <rect key="frame" x="35" y="122.5" width="285" height="43"/>
                                         <string key="text">We’ve sent you an SMS with a code
-to your number, +855 12 666666</string>
+to your number, +855 12 666 666</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -211,7 +212,7 @@ to your number, +855 12 666666</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.98039215690000003" green="0.68627450980000004" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="activeBorderLineColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

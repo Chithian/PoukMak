@@ -14,11 +14,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countryCode: UIStackView!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var phoneNum: UITextField!
+    @IBOutlet weak var phoneNumView: UIView!
     
     
+    var phoneNumber: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        phoneNumView.layer.cornerRadius = 10.00
+        phoneNumView.layer.borderWidth = 0.5
+        phoneNumView.layer.borderColor = UIColor.lightGray.cgColor
+        
         phoneNum.delegate = self
         countryCode.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 20
@@ -57,9 +63,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let constraints = viewContainer.constraints
         for constrain in constraints {
             if constrain.identifier == "ContinueBottomConstraint" {
-                constrain.constant = 60
+                constrain.constant = 50
             } else if constrain.identifier == "ContinueLeadingConstraint" || constrain.identifier == "ContinueTrailingConstraint" {
-                constrain.constant = 20
+                constrain.constant = 30
             } else if constrain.identifier == "LogoTopConstraint" {
                 constrain.constant = 40
             }
@@ -80,25 +86,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // make sure the result is under 12 characters
         return updatedText.count <= 12
     }
-//
 
     //Perform Segue to Verification Screen
     @IBAction func continueBottonPressed(_ sender: UIButton) {
-        
-        //continueButton.backgroundColor = UIColor.yellow
-        performSegue(withIdentifier: "GoToVerification", sender: self)
+        if phoneNum.text!.isEmpty  {
+            print("Error Missing")
+        }else {
+            
+            performSegue(withIdentifier: "GoToVerification", sender: self)
+        }
     }
     
-    // Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        _ = segue.destination as! VerificationViewController
+        
+    }
+    
+    // Navigation(remove Back keep only the icon )
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-      
-    }
 
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         navigationController?.setNavigationBarHidden(false, animated: animated)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
